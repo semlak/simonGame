@@ -1,0 +1,405 @@
+body {
+  background-image: url('http://www.psdgraphics.com/file/oak-wood-background.jpg');
+}
+
+#app-container {
+  margin: 20px 0 20px 0;
+
+}
+
+
+.border {
+  background: #000;
+  position: relative;
+}
+
+#outer-circle {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+  z-index: 0;
+  margin: auto;
+}
+
+.quarter-circle {
+  height: 170px;
+  width: 170px;
+  z-index: 20;
+  position: relative;
+  border-radius: 100% 0 0 0;
+}
+
+#quarter-circle-0 {
+  background: #007700;
+  /* top and left offsets are just the width of the outer border*/
+  top: 30px;
+  left: 30px;
+}
+
+#quarter-circle-0.lit {
+  background: #00ff00;
+}
+
+#quarter-circle-1 {
+  background: #770000;
+  /* top offset is the difference outer-radius - 2* outer border width, negated
+  left offset is the outer radius*/
+  top: -140px;
+  left: 200px;
+  transform: rotate(90deg)  
+}
+
+#quarter-circle-1.lit {
+  background: #ff0000;
+}
+
+#quarter-circle-2 {
+  background: #000077;
+  /*same as quarter-circle1 */
+  top: -140px;
+  left: 200px;
+  transform: rotate(180deg)  
+}
+
+#quarter-circle-2.lit {
+  background: #0000ff;
+}
+
+#quarter-circle-3 {
+  background: #777700;
+  
+  /* top offset is the previous quarter offset (140) - the outer-radius + outer-border
+  left offset is just width of outer border*/
+  top: -310px; 
+  left: 30px;
+  transform: rotate(270deg)  
+}
+
+#quarter-circle-3.lit {
+  background: #ffff00;
+}
+
+#horizontal-rectangle {
+  height: 30px;
+  width: 400px;
+  border-radius: 15px;
+  /*top offset is just the quarter-circle-3 offset - the outer-circle-radius plus half of the outer radius border (same as height of rectangle) */
+  top: -495px;
+  z-index: 30
+}
+
+#vertical-rectangle {
+  height: 400px;
+  width: 30px;
+  border-radius: 15px;
+  /*top offset is offset of horizonal rectangle - outer-circle-radius - half of outer-circle border (height of rectangle)
+  left offset is the outer-circle radius minus half the outer-circle border (same as width of rectangle) */
+  top: -710px;
+  left: 185px;
+  z-index: 30
+}
+
+
+#inner-circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: #fff;
+  border: 15px solid #000;
+  position: relative;
+  /*top offset is vertical-rectangle offset - 3/4 of outer-circle-radius
+  left offset is 1/4 of outer-circle-radius*/
+  top: -1010px;
+  left: 100px;
+  z-index: 50;
+  padding: 15px 5px 0px 10px;
+}
+
+#game-name-div {
+  font-size: 20px;
+}
+
+.glyphicon-registration-mark {
+  font-size: 10px;
+  vertical-align: top;  
+}
+
+
+#intro {
+  /*margin-top: 40px;*/
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  width: 350px;
+  padding-bottom: 20px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  
+}
+
+#counter {
+  height: 25px; 
+  width: 40px;
+  border-radius: 10px;
+  border: 3px solid #222;
+  font-family: "Bank Gothic", "Futura", "Arial";
+  background: #311;
+  color: #ff0000;
+  box-shadow: 1px 1px 3px #000;   
+}
+
+#counter.inactive {
+  color: #700;
+  font-color: #000;
+}
+
+#start-button-div {
+  margin-right: 10px;
+  margin-left: 8px;
+  width: 47px;
+}
+
+#start-button {
+  background: #00ff00;
+}
+
+#strict-button {
+  background: #ffff00;
+}
+
+#strict-status-indicator {
+  position: relative;
+  top : -60px;
+  left: 14px;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: #777 !important;
+  border: 2px solid #222 ;    
+}
+
+#strict-status-indicator.inactive {
+  border-color: #444 ;    
+}
+
+#strict-status-indicator.enabled {
+  background: #f00 !important;
+}
+
+.game-control-button {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 3px solid #222;
+  margin: auto;
+  box-shadow: 2px 2px 6px;  
+}
+
+.game-control-button.inactive {
+  background: #777 !important;
+  box-shadow: none;
+  border-color:  #444;
+}
+
+
+.button-press {
+  box-shadow: none;
+}
+
+
+
+.game-label {
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.game-label.inactive {
+  color: #777;
+}
+
+#on-off-switch-div {
+  margin-top: 10px;
+}
+
+
+
+.on-off-switch-label {
+  vertical-align: middle;
+  height: 20px;
+  font-size: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.on-off-controls {
+  width: 30px;
+  height:20px;
+  background: #111;
+}
+
+#on-off-switch {
+  border: 2px solid #000;
+  background: #111;
+  border-radius: 2px;
+  height: 24px;
+  box-shadow: 1px 1px 3px;  
+}
+
+.active-on-off-control {
+  border: 1px solid #000;
+  border-radius: 2px;
+  background: #00688B; /*deepskyblue4 */
+  box-shadow: 1px 1px 4px #000;   
+  
+}
+
+#game-options {
+  /*margin-top: 40px;*/
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  width: 350px;
+  padding-bottom: 20px;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  
+}
+
+.inner-circle-contents {
+  text-align: center;
+  margin: auto;
+  margin-top: 8px;
+
+}
+
+.inline {
+  display: inline-block;
+  
+}
+
+
+#message-container {
+  /*
+  color: #000;
+  background: #fff;
+  border: 2px solid #000;
+  */
+  width: 350px;
+  height: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+#message {
+  color: #fff;
+  text-align: center;
+  margin: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+#game-board {
+  background: #000;
+  width: 350px;
+  height: 350px;
+  padding: 25px;
+  margin: auto;
+  margin-top: 20px;
+  text-align: center;  
+}
+
+#game-board-table {
+  margin: auto;  
+  color: #fff;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  font-size: 50px;
+  padding: 0px;
+  
+}
+
+.h-borders {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;  
+}
+
+.v-borders {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;  
+}
+
+.v-h-borders {
+  border: 1px solid #fff;
+}
+
+.falling-diagonal {
+    margin: 0px;
+    padding: 0px;
+    width: 422px; /*roughly 300 * sqrt(2) */
+    height: 1px;
+    border-bottom: 1px dashed #fff;
+    -webkit-transform:
+        translateY(-70px)
+        translateX(50px)
+        rotate(45deg); 
+    position: relative;
+    top: -81px;
+    left: -111px;
+    z-index: 10;
+    /* top: -20px; */
+}
+
+
+.rising-diagonal {
+    margin: 0px;
+    padding: 0px;
+    width: 422px; /*roughly 300 * sqrt(2) */
+    height: 1px;
+    border-bottom: 1px dashed #fff;
+    -webkit-transform:
+        translateY(-70px)
+        translateX(50px)
+        rotate(-45deg); 
+    position: relative;
+    top: -81px;
+    left: -111px;
+    z-index: 10;
+    /* top: -20px; */
+}
+
+
+.horizontal-line {
+    margin: 0px;
+    padding: 0px;
+    width: 300px; 
+    height: 1px;
+    border-bottom: 1px dashed #fff;
+    position: relative;
+    top: -250px;
+    left: 0px;
+    z-index: 10;
+    /* top: -20px; */
+}
+
+
+.vertical-line {
+    margin: 0px;
+    padding: 0px;
+    width: 50px; 
+    height: 300px;
+    border-left: 1px dashed #fff;
+    position: relative;
+    top: -300px;
+    left: 50px;
+    z-index: 10;
+    /* top: -20px; */
+}
